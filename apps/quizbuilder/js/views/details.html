@@ -1,0 +1,46 @@
+<div class="quizbuilder-details">
+    <div class="form-horizontal">
+        <div class="form-group">
+            <label for="name" class="col-sm-2 control-label">Name</label>
+            <div class="col-sm-6">
+                <input ng-model="quiz.title" ng-blur="moveValidationClass($event)" required type="text" class="form-control" id="name" placeholder="Quiz Name">
+            </div>
+            <div class="col-sm-2">
+                <div class="help-block">A quiz requires a quiz name</div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="keystage" class="col-sm-2 control-label">Key Stage</label>
+            <div class="col-sm-6">
+                <select class="form-control" ng-model="quiz.keystage" ng-blur="moveValidationClass($event)" id="keystage" required>
+                    <option value="">Select a key stage</option>
+                    <option ng-repeat="keystage in keyStages | filter: quiz.subject" value="{{ keystage.id }}">{{ keystage.title }}</option>
+                </select>
+            </div>
+            <div class="col-sm-2">
+                <div class="help-block">Select a key stage to continue.</div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="subject" class="col-sm-2 control-label">Subject</label>
+            <div class="col-sm-6">
+                <select class="form-control" ng-model="quiz.subject" ng-blur="moveValidationClass($event)" id="subject" required>
+                    <option value="">Select a subject</option>
+                    <option ng-repeat="subject in subjects  |filter:quiz.keystage" value="{{ subject.id }}">{{ subject.title }}</option>
+                </select>
+            </div>
+            <div class="col-sm-2">
+                <div class="help-block">Select a subject to continue.</div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="instructions" class="col-sm-2 control-label">Instructions</label>
+            <div class="col-sm-6">
+                <textarea ng-model="quiz.instructions" class="form-control" id="instructions" placeholder="Instructions"></textarea>
+            </div>
+            <div class="col-sm-2">
+                <div class="help-block"></div>
+            </div>
+        </div>
+    </div>
+</div>

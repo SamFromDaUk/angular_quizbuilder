@@ -1,0 +1,61 @@
+body {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}
+
+.ellipsis {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.quizbuilder-core .header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    background-color: #017abf;
+    height: 54px;
+    padding: 10px 0;
+}
+
+.quizbuilder-core .header h1 {
+    color: #fff;
+    line-height: 34px;
+    margin: 0;
+    height: 34px;
+    position: absolute;
+    left:10px;
+    width: 80%;
+    font-size: 20px;
+}
+
+.quizbuilder-core .header h2 {
+    color: #fff;
+    margin: 0;
+    line-height: 34px;
+    position: absolute;
+    right:10px;
+    width: 20%;
+    text-align: right;
+    font-size: 14px;
+}
+
+.quizbuilder-core .content {
+    position: absolute;
+    top: 54px;
+    right: 0;
+    bottom: 54px;
+    left: 0;
+    padding: 20px 10px 10px 10px;
+}
+
+.quizbuilder-core .footer {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    padding: 10px;
+    background-color: #017abf;
+}
